@@ -1,0 +1,10 @@
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/bin/Debug/netcoreapp2.1/Asynchrounous.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/bin/Debug/netcoreapp2.1/Asynchrounous.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/bin/Debug/netcoreapp2.1/Asynchrounous.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/bin/Debug/netcoreapp2.1/Asynchrounous.dll
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/bin/Debug/netcoreapp2.1/Asynchrounous.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.csproj.CoreCompileInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.dll
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.pdb

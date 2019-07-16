@@ -1,0 +1,89 @@
+﻿using System;
+using System.Diagnostics;
+using System.Threading;
+
+namespace ProcessBasics
+{
+    class ExampleProcesses
+    {
+        /// <summary>
+        /// Controls the process: 
+        /// This example shows how to print information of a process and control (terminate in this case) it.
+        /// </summary>
+        public void printProcesses()
+        {
+            Console.WriteLine(" This method is going to print information of processes ... ");
+
+            bool stop = false;
+            // How to get the current running process
+            Process currentProc = Process.GetCurrentProcess();
+
+            // How to get all the running processes in the local computer
+            Process[] localProcsAll = Process.GetProcesses();
+
+            while (!stop)
+            {
+                foreach (Process pr in localProcsAll)
+                {
+                    // Print some information from the process: name and id. There are more.
+                    Console.WriteLine("[Processes]: Process Name = {0}, Id = {1}", pr.ProcessName, pr.Id);
+                }
+                Console.WriteLine(" Enter a process id to terminate (0 to finish):");
+                string inp = Console.ReadLine();
+                if (inp == "stop") { stop = true; }
+                else
+                {
+                    foreach (Process p in localProcsAll)
+                    {
+                        if (p.Id == Int32.Parse(inp))
+                        {
+                            // Terminate a specific process
+                            p.Kill();
+                            Console.WriteLine("Process {0} is terminated ... ", p.ProcessName);
+                            Console.ReadLine();
+                        }
+                    }
+                }
+            }
+        }
+    }
+    class ExampleThreads
+    {
+        /// <summary>
+        /// Prints the threads:
+        /// 
+        /// </summary>
+        public void printThreads()
+        {
+            Console.WriteLine(" This method is going to print information of threads ... ");
+            // Get the current process
+            Process proc = System.Diagnostics.Process.GetCurrentProcess();
+
+            // Print the information of the process
+            Console.WriteLine("process: {0},  id: {1}", proc.ProcessName, proc.Id);
+
+            // Print basic information for each thread
+            foreach (ProcessThread pt in proc.Threads)
+            {
+                Console.WriteLine("-----------------------");
+                Console.WriteLine(" Thread: {0}, CPU time: {1}, Priority: {2}, Thread state: {3}", pt.Id, pt.TotalProcessorTime, pt.BasePriority, pt.ThreadState.ToString());
+            }
+        }
+
+
+    }
+    class Program
+    {
+        /// <param name="args">The command-line arguments.</param>
+        static void Main(string[] args)
+        {
+            ExampleProcesses exampleWeekOne = new ExampleProcesses();
+            //exampleWeekOne.printProcesses();
+
+            ExampleThreads exampleWeekTwo = new ExampleThreads();
+            //exampleWeekTwo.printThreads();
+            exampleWeekTwo.createOneThread();
+            exampleWeekTwo.createTwoXYThreads();
+        }
+    }
+}
