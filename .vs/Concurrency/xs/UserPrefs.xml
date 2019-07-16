@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{FBD86EDE-5FC0-43BB-A408-9ABE806F06BC}|Default">
+  <MonoDevelop.Ide.ItemProperties.Processes PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Asynchrounous/Program.cs">
+    <Files>
+      <File FileName="Processes/Program.cs" Line="1" Column="1" />
+      <File FileName="Synchronization/Program.cs" Line="11" Column="1" />
+      <File FileName="Asynchrounous/Program.cs" Line="11" Column="31" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Concurrency" expanded="True">
+            <Node name="Asynchrounous" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="Processes" expanded="True" />
+            <Node name="Synchronization" expanded="True" />
+            <Node name="Threads" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Asynchrounous PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

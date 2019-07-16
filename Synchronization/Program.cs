@@ -7,7 +7,6 @@ namespace Synchronization
     {
         public  class Counter
         {
-            // Check: What is the object is defined within the method? Is it still thread safe?
             private readonly Object mutex = new Object();
 
             public int count { get; set; }

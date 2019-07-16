@@ -44,7 +44,7 @@ namespace Asynchrounous
                 private void prepare(int t, string m)
                 {
                     Console.Write("\nstarted with preparing {0}", m);
-                    Thread.Sleep(tunit * t);
+                    Thread.Sleep(tunit * t); // Time needed to do the task.
                     Console.Write("\n{0} is ready ... ", m);
                 }
                 public async Task<Coffee> prepareCoffee()
