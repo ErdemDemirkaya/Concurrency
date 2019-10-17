@@ -5,7 +5,7 @@ namespace Synchronization
 {
     class ExamplesWeekThree
     {
-        public  class Counter
+        public class Counter
         {
             private readonly Object mutex = new Object();
 

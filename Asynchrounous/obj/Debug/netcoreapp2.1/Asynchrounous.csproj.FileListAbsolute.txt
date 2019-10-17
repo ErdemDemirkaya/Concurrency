@@ -8,3 +8,4 @@
 /Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.AssemblyInfo.cs
 /Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.dll
 /Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/Asynchrounous/obj/Debug/netcoreapp2.1/Asynchrounous.csprojAssemblyReference.cache

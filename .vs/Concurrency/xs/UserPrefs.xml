@@ -1,16 +1,19 @@
 ﻿<Properties StartupConfiguration="{FBD86EDE-5FC0-43BB-A408-9ABE806F06BC}|Default">
   <MonoDevelop.Ide.ItemProperties.Processes PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Asynchrounous/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IPCPipes/Program.cs">
     <Files>
       <File FileName="Processes/Program.cs" Line="1" Column="1" />
-      <File FileName="Synchronization/Program.cs" Line="11" Column="1" />
-      <File FileName="Asynchrounous/Program.cs" Line="11" Column="31" />
+      <File FileName="Synchronization/Program.cs" />
+      <File FileName="Asynchrounous/Program.cs" />
+      <File FileName="Threads/Program.cs" Line="205" Column="24" />
+      <File FileName="IPCPipes/Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Concurrency" expanded="True">
-            <Node name="Asynchrounous" expanded="True">
+            <Node name="Asynchrounous" expanded="True" />
+            <Node name="IPCPipes" expanded="True">
               <Node name="Program.cs" selected="True" />
             </Node>
             <Node name="Processes" expanded="True" />
@@ -21,6 +24,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.IPCPipes FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.Asynchrounous PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

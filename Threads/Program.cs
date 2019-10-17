@@ -4,34 +4,42 @@ using System.Threading;
 
 namespace ThreadBasics
 {
-    class ExampleThreads
+    class ExamplesWeekTwo
     {
-        /// <summary>
-        /// Prints the threads:
-        ///
-        /// </summary>
-        public void printThreads()
+        public class ThreadsList
         {
-            Console.WriteLine(" This method is going to print information of threads ... ");
-            // Get the current process
-            Process proc = System.Diagnostics.Process.GetCurrentProcess();
-
-            // Print the information of the process
-            Console.WriteLine("process: {0},  id: {1}", proc.ProcessName, proc.Id);
-
-            // Print basic information for each thread
-            foreach (ProcessThread pt in proc.Threads)
+            /// <summary>
+            /// Prints the threads:
+            ///
+            /// </summary>
+            public void printThreads()
             {
-                Console.WriteLine("-----------------------");
-                Console.WriteLine(" Thread: {0}, CPU time: {1}, Priority: {2}, Thread state: {3}", pt.Id, pt.TotalProcessorTime, pt.BasePriority, pt.ThreadState.ToString());
+                Console.WriteLine(" This method is going to print information of threads ... ");
+                // Get the current process
+                Process proc = System.Diagnostics.Process.GetCurrentProcess();
+
+                // Print the information of the process
+                Console.WriteLine("process: {0},  id: {1}", proc.ProcessName, proc.Id);
+
+                // Print basic information for each thread
+                foreach (ProcessThread pt in proc.Threads)
+                {
+                    Console.WriteLine("-----------------------");
+                    Console.WriteLine(" Thread: {0}, CPU time: {1}, Priority: {2}, Thread state: {3}", pt.Id, pt.TotalProcessorTime, pt.BasePriority, pt.ThreadState.ToString());
+                }
+            }
+
+            public void runExample()
+            {
+                this.printThreads();
             }
         }
-    }
+    
 
     /// <summary>
     /// Class <c>Counter</c> models a simple counter which increments its.
     /// </summary>
-    class Counter
+    public class Counter
     {
         public string Name { get; set; }
         public int State { get; set; } 
@@ -64,11 +72,11 @@ namespace ThreadBasics
         }
     }
 
-    class Creator
+    public class ThreadsJoin
     {
         public int WT { get; set; }
 
-        public Creator(int t)
+        public ThreadsJoin(int t)
         {
             this.WT = t;
         }
@@ -107,12 +115,13 @@ namespace ThreadBasics
     /// - joining to a thread.
     /// - puting a thread to sleep.
     /// </summary>
-    class ExamplesWeekTwo
+    class ExampleThreadCreation
     {
         private static void printCounts()
-        { 
-            for (int i = 0; i < 100; i++) 
-                Console.Write("{0},", i);
+        {
+            int c = 0, limit = 1000; 
+            for ( c = 0; c < limit; c++) 
+                Console.Write("{0},", c);
         }
 
         private static void printChars(int n, char c)
@@ -131,15 +140,16 @@ namespace ThreadBasics
         {
             Console.WriteLine("Press a key to start a counting thread ... ");
             Console.Read();
-            // Note: Here the given task is defined using lambda expressions. 
-            // Check the next statement to see how to pass define a task using a method.
-            //Thread tOne = new Thread(() => { for (int i = 0; i < 100; i++) Console.Write("{0},", i); });
+            // We create an instaince of Thread, with a given task
+            // Note: Here the given task is defined using a (static) method.
             Thread tOne = new Thread(printCounts);
 
-            //tOne.Start();
-            // Note: Given parameter to the Start will be passed to the provided task
+            // Check the next statement to see how to pass a task using a lambda expression.
+            //Thread tOne = new Thread(() => { for (int c = 0; c < 1000; c++) Console.Write("{0},", c); });
+
+            // Here we start the thread to perform the task
             tOne.Start();
-            Console.WriteLine(" The main thread has terminated ... ");
+            Console.WriteLine(" The main thread is going to terminate ... ");
 
         }
 
@@ -192,6 +202,8 @@ namespace ThreadBasics
 
         }
 
+        public void run
+
 
 
     }
@@ -204,7 +216,10 @@ namespace ThreadBasics
             //creator.runTasks();
             //Console.WriteLine("The program finishes now ....");
 
-            ExamplesWeekTwo example = new ExamplesWeekTwo();
+            ExamplesWeekTwo ewTwo = new ExamplesWeekTwo();
+            ewTwo.runExampleThreadsList();
+            ewTwo.runExampleThreadsCreation();
+            ewTwo.runExampleThreadsJoin();
             example.createOneThread();
             example.createTwoXYThreads();
             example.createMultipleThreads();
