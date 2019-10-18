@@ -1,0 +1,9 @@
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/bin/Debug/netcoreapp2.1/IPCPipes.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/bin/Debug/netcoreapp2.1/IPCPipes.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/bin/Debug/netcoreapp2.1/IPCPipes.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/bin/Debug/netcoreapp2.1/IPCPipes.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/bin/Debug/netcoreapp2.1/IPCPipes.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/obj/Debug/netcoreapp2.1/IPCPipes.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/obj/Debug/netcoreapp2.1/IPCPipes.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/obj/Debug/netcoreapp2.1/IPCPipes.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipes/obj/Debug/netcoreapp2.1/IPCPipes.pdb

@@ -9,9 +9,10 @@ namespace IPCPipes
     {
         static void Main()
         {
+            // Instantiate an object as an empty process
             Process pipeClient = new Process();
-
-            pipeClient.StartInfo.FileName = "pipeClient.exe";
+            // Which code to be executed by the process.
+            pipeClient.StartInfo.FileName = "./IPCPipeClient";
 
             using (AnonymousPipeServerStream pipeServer =
                 new AnonymousPipeServerStream(PipeDirection.Out,

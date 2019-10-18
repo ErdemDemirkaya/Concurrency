@@ -1,0 +1,11 @@
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/bin/Debug/netcoreapp3.0/IPCPipeClient
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/bin/Debug/netcoreapp3.0/IPCPipeClient.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/bin/Debug/netcoreapp3.0/IPCPipeClient.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/bin/Debug/netcoreapp3.0/IPCPipeClient.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/bin/Debug/netcoreapp3.0/IPCPipeClient.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/bin/Debug/netcoreapp3.0/IPCPipeClient.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/obj/Debug/netcoreapp3.0/IPCPipeClient.csprojAssemblyReference.cache
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/obj/Debug/netcoreapp3.0/IPCPipeClient.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/obj/Debug/netcoreapp3.0/IPCPipeClient.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/obj/Debug/netcoreapp3.0/IPCPipeClient.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/obj/Debug/netcoreapp3.0/IPCPipeClient.pdb

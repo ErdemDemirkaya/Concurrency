@@ -1,0 +1,10 @@
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/bin/Debug/netcoreapp3.0/IPCPipeExample
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/bin/Debug/netcoreapp3.0/IPCPipeExample.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/bin/Debug/netcoreapp3.0/IPCPipeExample.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/bin/Debug/netcoreapp3.0/IPCPipeExample.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/bin/Debug/netcoreapp3.0/IPCPipeExample.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/bin/Debug/netcoreapp3.0/IPCPipeExample.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/obj/Debug/netcoreapp3.0/IPCPipeExample.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/obj/Debug/netcoreapp3.0/IPCPipeExample.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/obj/Debug/netcoreapp3.0/IPCPipeExample.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/obj/Debug/netcoreapp3.0/IPCPipeExample.pdb

@@ -1,30 +1,25 @@
-﻿<Properties StartupConfiguration="{FBD86EDE-5FC0-43BB-A408-9ABE806F06BC}|Default">
+﻿<Properties StartupConfiguration="{0263D258-0B57-49D3-87D4-71B395BC1EC9}|Default">
   <MonoDevelop.Ide.ItemProperties.Processes PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="IPCPipes/Program.cs">
     <Files>
       <File FileName="Processes/Program.cs" Line="1" Column="1" />
       <File FileName="Synchronization/Program.cs" />
       <File FileName="Asynchrounous/Program.cs" />
-      <File FileName="Threads/Program.cs" Line="205" Column="24" />
-      <File FileName="IPCPipes/Program.cs" Line="1" Column="1" />
+      <File FileName="Threads/Program.cs" />
+      <File FileName="IPCPipes/Program.cs" Line="13" Column="17" />
+      <File FileName="IPCPipeClient/Program.cs" Line="21" Column="56" />
+      <File FileName="IPCPipeExample/Program.cs" Line="14" Column="65" />
+      <File FileName="PipeClient/Program.cs" Line="22" Column="71" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Concurrency" expanded="True">
-            <Node name="Asynchrounous" expanded="True" />
-            <Node name="IPCPipes" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
-            <Node name="Processes" expanded="True" />
-            <Node name="Synchronization" expanded="True" />
-            <Node name="Threads" expanded="True" />
-          </Node>
+          <Node />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.IPCPipes FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.IPCPipes PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Asynchrounous PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
