@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/IPCPipeExample.csproj",
-      "projectName": "IPCPipeExample",
-      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/IPCPipeExample.csproj",
+      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/IPCNamedServer.csproj",
+      "projectName": "IPCNamedServer",
+      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/IPCNamedServer.csproj",
       "packagesPath": "/Users/amighi/.nuget/packages/",
       "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/obj/",
       "projectStyle": "PackageReference",

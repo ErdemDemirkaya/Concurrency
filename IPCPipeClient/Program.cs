@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO;
 using System.IO.Pipes;
-
+/*
+ * This is an example representing how two processes can communicate through AnonymousPipe
+ */
 namespace IPCPipeClient
 { 
     class PipeClient

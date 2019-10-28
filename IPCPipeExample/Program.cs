@@ -5,6 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * This is an example representing how two processes can communicate through NamedPipe
+ */
+
 namespace ConsoleApplication1
 {
     class Program

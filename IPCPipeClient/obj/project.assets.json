@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/IPCPipeClient.csproj",
-      "projectName": "IPCPipeClient",
-      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/IPCPipeClient.csproj",
+      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/IPCPipeAnonymClient.csproj",
+      "projectName": "IPCPipeAnonymClient",
+      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/IPCPipeAnonymClient.csproj",
       "packagesPath": "/Users/amighi/.nuget/packages/",
       "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeClient/obj/",
       "projectStyle": "PackageReference",

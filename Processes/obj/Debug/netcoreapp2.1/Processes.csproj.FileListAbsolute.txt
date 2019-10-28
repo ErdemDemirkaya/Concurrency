@@ -1,5 +1,4 @@
 /Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp2.1/Processes.csprojAssemblyReference.cache
-/Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp2.1/Processes.csproj.CoreCompileInputs.cache
 /Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp2.1/Processes.AssemblyInfoInputs.cache
 /Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp2.1/Processes.AssemblyInfo.cs
 /Users/amighi/workspace/VSProjects/Concurrency/Processes/bin/Debug/netcoreapp2.1/Processes.deps.json

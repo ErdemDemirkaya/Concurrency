@@ -64,7 +64,14 @@ namespace ProcessBasics
                 }
             }
         }
-        // Todo: Add a method that given an executable program starts the process ...
+
+        public void createProcess()
+        {
+            /* This method asks the user to enter an executable file to run.
+            Then it will create the process object to run the program.
+            */
+
+        }
     }
     class Program
     {
@@ -72,10 +79,11 @@ namespace ProcessBasics
         static void Main(string[] args)
         {
             // Uncomment the methods to see the results of the examples
-            ExampleProcesses exampleWeekOne = new ExampleProcesses();
-            Console.WriteLine("Example:"+exampleWeekOne.GetType().Name);
-            exampleWeekOne.printAllProcesses();
-            exampleWeekOne.terminateProcess();
+            ExampleProcesses exampleWeekTwo = new ExampleProcesses();
+            Console.WriteLine("Example:"+exampleWeekTwo.GetType().Name);
+            exampleWeekTwo.printAllProcesses();
+            exampleWeekTwo.terminateProcess();
+            exampleWeekTwo.createProcess();
 
 
             //ExampleThreads exampleWeekTwo = new ExampleThreads();

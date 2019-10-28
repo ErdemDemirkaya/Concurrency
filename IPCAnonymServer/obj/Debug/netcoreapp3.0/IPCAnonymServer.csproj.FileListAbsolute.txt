@@ -1,0 +1,10 @@
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/bin/Debug/netcoreapp3.0/IPCAnonymServer
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/bin/Debug/netcoreapp3.0/IPCAnonymServer.deps.json
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/bin/Debug/netcoreapp3.0/IPCAnonymServer.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/bin/Debug/netcoreapp3.0/IPCAnonymServer.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/bin/Debug/netcoreapp3.0/IPCAnonymServer.dll
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/bin/Debug/netcoreapp3.0/IPCAnonymServer.pdb
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/obj/Debug/netcoreapp3.0/IPCAnonymServer.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/obj/Debug/netcoreapp3.0/IPCAnonymServer.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/obj/Debug/netcoreapp3.0/IPCAnonymServer.dll
+/Users/amighi/workspace/VSProjects/Processes/IPCAnonymServer/obj/Debug/netcoreapp3.0/IPCAnonymServer.pdb

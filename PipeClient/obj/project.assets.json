@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/PipeClient/PipeClient.csproj",
-      "projectName": "PipeClient",
-      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/PipeClient/PipeClient.csproj",
+      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/PipeClient/IPCNamedClient.csproj",
+      "projectName": "IPCNamedClient",
+      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/PipeClient/IPCNamedClient.csproj",
       "packagesPath": "/Users/amighi/.nuget/packages/",
       "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/PipeClient/obj/",
       "projectStyle": "PackageReference",
