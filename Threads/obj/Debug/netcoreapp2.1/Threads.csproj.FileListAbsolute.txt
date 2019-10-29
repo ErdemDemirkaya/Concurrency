@@ -4,7 +4,6 @@
 /Users/amighi/workspace/VSProjects/Concurrency/Threads/bin/Debug/netcoreapp2.1/Threads.dll
 /Users/amighi/workspace/VSProjects/Concurrency/Threads/bin/Debug/netcoreapp2.1/Threads.pdb
 /Users/amighi/workspace/VSProjects/Concurrency/Threads/obj/Debug/netcoreapp2.1/Threads.csprojAssemblyReference.cache
-/Users/amighi/workspace/VSProjects/Concurrency/Threads/obj/Debug/netcoreapp2.1/Threads.csproj.CoreCompileInputs.cache
 /Users/amighi/workspace/VSProjects/Concurrency/Threads/obj/Debug/netcoreapp2.1/Threads.AssemblyInfoInputs.cache
 /Users/amighi/workspace/VSProjects/Concurrency/Threads/obj/Debug/netcoreapp2.1/Threads.AssemblyInfo.cs
 /Users/amighi/workspace/VSProjects/Concurrency/Threads/obj/Debug/netcoreapp2.1/Threads.dll

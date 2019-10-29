@@ -1,20 +1,20 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v2.1",
+    "name": ".NETCoreApp,Version=v3.0",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v2.1": {
-      "Threads/1.0.0": {
+    ".NETCoreApp,Version=v3.0": {
+      "MergeSort/1.0.0": {
         "runtime": {
-          "Threads.dll": {}
+          "MergeSort.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Threads/1.0.0": {
+    "MergeSort/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
