@@ -7,24 +7,23 @@ namespace ProcessBasics
     {
         private Process[] localProcsAll;
         /// <summary>
-        /// Print all processes:
-        /// This example all the running processes will be printed.
+        /// Prints all the running processes.
         /// </summary>
         public void printAllProcesses()
         {
             Console.WriteLine("This method is going to print information of current processes ... ");
 
-            // How to get all the running processes in the local computer
+            // How to get all the running processes in a local computer
             this.localProcsAll = Process.GetProcesses();
             foreach (Process pr in this.localProcsAll)
             {
                 // Print some information from the process: name and id. There are more.
-                Console.WriteLine("Process Name = {0}, Id = {1}", pr.ProcessName, pr.Id);
+                Console.WriteLine("Process Name = {0}, Id = {1}", pr.ProcessName, pr.Id.ToString());
             }
         }
         /// <summary>
         /// Terminates the process: 
-        /// This example shows how to control (terminate in this case) a running process.
+        /// This example shows how to terminate a running process.
         /// </summary>
         public void terminateProcess()
         {
@@ -58,21 +57,14 @@ namespace ProcessBasics
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("An exception in your input ...");
+                            Console.WriteLine("Your input is not valid ...");
+                            break;
                         }
                     }
                 }
             }
         }
-
-        public void createProcess()
-        {
-            /* This method asks the user to enter an executable file to run.
-            Then it will create the process object to run the program.
-            */
-
-        }
-    }
+     }
     class Program
     {
         /// <param name="args">The command-line arguments.</param>
@@ -80,16 +72,8 @@ namespace ProcessBasics
         {
             // Uncomment the methods to see the results of the examples
             ExampleProcesses exampleWeekTwo = new ExampleProcesses();
-            Console.WriteLine("Example:"+exampleWeekTwo.GetType().Name);
             exampleWeekTwo.printAllProcesses();
             exampleWeekTwo.terminateProcess();
-            exampleWeekTwo.createProcess();
-
-
-            //ExampleThreads exampleWeekTwo = new ExampleThreads();
-            //exampleWeekTwo.printThreads();
-            //exampleWeekTwo.createOneThread();
-            //exampleWeekTwo.createTwoXYThreads();
         }
     }
 }

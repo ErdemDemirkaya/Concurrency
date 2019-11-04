@@ -15,7 +15,7 @@ namespace MergeSort
 
         public void printContent()
         {
-            Console.WriteLine("Content of the array is:");
+            Console.WriteLine("\n Content of the array is:");
             for (int i = 0; i < input.Length; i++)
                 Console.Write("data[{0}]={1} ;",i,input[i]);
         }
@@ -77,24 +77,25 @@ namespace MergeSort
         {
             MergeSort mergeSort = new MergeSort(d);
 
+            // divide the main array into two pieces: left and right. Each thread sorts one piece independent from the other.
             int midPos = d.Length / 2;
-
             Thread leftSort = new Thread(()=>mergeSort.sortSeq(0,midPos));
             Thread rightSort = new Thread(() => mergeSort.sortSeq(midPos+1, d.Length-1));
 
+            // we start thread to sort their segments
             leftSort.Start();
             rightSort.Start();
-
+            // we wait for threads to finish their job
             leftSort.Join();
             rightSort.Join();
-
+            // Each thread sorted a segment. Now we have to merge the results to create the complete sorted array.
             mergeSort.merge(0,midPos,d.Length-1);
             mergeSort.printContent();
         }
 
         static void Main(string[] args)
         {
-            int[] arr = new int[10] { 1, 5, 4, 11, 20, 8, 2, 98, 90, 16 };
+            int[] arr = { 1, 5, 4, 11, 20, 8, 2, 98, 90, 16, 3 , 100, 83, 24, 18, 33, 44, 76 };
 
             MergeSort mergeSort = new MergeSort(arr);
 
@@ -102,7 +103,7 @@ namespace MergeSort
             mergeSort.sortSeq(0, arr.Length - 1);
             mergeSort.printContent();
 
-            Console.WriteLine("Now concurrent sort will be running ...");
+            Console.WriteLine("\n Now concurrent sort will be running ...");
             ExampleMergeSort.sortCon(arr);
 
         }

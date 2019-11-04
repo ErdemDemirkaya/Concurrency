@@ -1,0 +1,11 @@
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/bin/Debug/netcoreapp3.0/Processes
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/bin/Debug/netcoreapp3.0/Processes.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/bin/Debug/netcoreapp3.0/Processes.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/bin/Debug/netcoreapp3.0/Processes.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/bin/Debug/netcoreapp3.0/Processes.dll
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/bin/Debug/netcoreapp3.0/Processes.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp3.0/Processes.csprojAssemblyReference.cache
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp3.0/Processes.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp3.0/Processes.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp3.0/Processes.dll
+/Users/amighi/workspace/VSProjects/Concurrency/Processes/obj/Debug/netcoreapp3.0/Processes.pdb
