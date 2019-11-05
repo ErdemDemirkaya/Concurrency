@@ -1,8 +1,14 @@
 ﻿using System;
 using System.Threading;
 
+/// <summary>
+/// This example is designed to show how a sort algorithm can be implemented concurrently.
+/// </summary>
 namespace MergeSort
 {
+    /// <summary>
+    /// Merge sort: sequential implementation.
+    /// </summary>
     public class MergeSort
     {
         int[] input;
@@ -71,26 +77,20 @@ namespace MergeSort
     }
     class ExampleMergeSort
     {
-        // This method is a simple implementation for exercise of week 2: Threads.
-        // In the class this method should be removed and students are expected to implement this solution themselves.
+        // Implements concurrent version of MergeSort.
         static void sortCon(int[] d)
         {
-            MergeSort mergeSort = new MergeSort(d);
+            // Todo 1: Instantiate an object of mergeSort.
 
-            // divide the main array into two pieces: left and right. Each thread sorts one piece independent from the other.
-            int midPos = d.Length / 2;
-            Thread leftSort = new Thread(()=>mergeSort.sortSeq(0,midPos));
-            Thread rightSort = new Thread(() => mergeSort.sortSeq(midPos+1, d.Length-1));
+            // Todo 2: Divide the main array into two pieces: left and right. Where is the middle?
 
-            // we start thread to sort their segments
-            leftSort.Start();
-            rightSort.Start();
-            // we wait for threads to finish their job
-            leftSort.Join();
-            rightSort.Join();
-            // Each thread sorted a segment. Now we have to merge the results to create the complete sorted array.
-            mergeSort.merge(0,midPos,d.Length-1);
-            mergeSort.printContent();
+            // Todo 3: Give the tasks. Each thread sorts one piece independent from the other.
+
+            // Todo 4: Start the threads.
+
+            // Todo 5: Join to the working threads.
+
+            // Todo 6: Merge the results to create the complete sorted array. Then print the content
         }
 
         static void Main(string[] args)
@@ -104,7 +104,7 @@ namespace MergeSort
             mergeSort.printContent();
 
             Console.WriteLine("\n Now concurrent sort will be running ...");
-            ExampleMergeSort.sortCon(arr);
+            //ExampleMergeSort.sortCon(arr);
 
         }
     }
