@@ -5,25 +5,20 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Asynchrounous/Program.cs">
     <Files>
       <File FileName="Threads/Program.cs" Line="16" Column="24" />
-      <File FileName="PrimeNumbers/Program.cs" Line="59" Column="1" />
-      <File FileName="MergeSort/Program.cs" Line="95" Column="1" />
-      <File FileName="SocketClient/Program.cs" Line="18" Column="42" />
+      <File FileName="PrimeNumbers/Program.cs" Line="1" Column="1" />
+      <File FileName="MergeSort/Program.cs" Line="1" Column="1" />
+      <File FileName="SocketClient/Program.cs" Line="1" Column="1" />
       <File FileName="SocketServer/Program.cs" Line="1" Column="1" />
-      <File FileName="PrimeNumbers/SolProgram.cs" Line="72" Column="39" />
-      <File FileName="Synchronization/Program.cs" Line="17" Column="14" />
-      <File FileName="Processes/Program.cs" Line="12" Column="26" />
-      <File FileName="Semaphores/Program.cs" Line="1" Column="1" />
-      <File FileName="Asynchrounous/Program.cs" Line="12" Column="28" />
+      <File FileName="PrimeNumbers/SolProgram.cs" />
+      <File FileName="Synchronization/Program.cs" />
+      <File FileName="Processes/Program.cs" />
+      <File FileName="Semaphores/Program.cs" />
+      <File FileName="Asynchrounous/Program.cs" Line="11" Column="25" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Concurrency" expanded="True">
-            <Node name="Processes" expanded="True" />
-            <Node name="Semaphores" expanded="True" />
-            <Node name="Synchronization" expanded="True" />
-            <Node name="Threads" expanded="True" />
-          </Node>
+          <Node name="Concurrency" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
