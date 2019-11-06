@@ -56,33 +56,6 @@ namespace PrimeNumbers
         private static void runConcurrent(int m, int M, int nt)
         {
             // Todo 1: Create nt number of threads, define their segments and start them. Join them all to have all the work done.
-            Stopwatch sw = new Stopwatch();
-
-            int numTs = nt;
-            int s = (M - m) / nt;
-            int l = 0, u = 0;
-
-            Thread[] ts = new Thread[numTs];
-            for (int i = 0; i < numTs; i++)
-            {
-                l = m + s * i;
-                if (i == numTs - 1)
-                    u = M;
-                else
-                    u = m + s * (i + 1);
-
-                ts[i] = new Thread(() => PrimeNumbers.printPrimes(l, u));
-            }
-
-            sw.Start();
-            for (int i = 0; i < numTs; i++)
-                ts[i].Start();
-
-            for (int i = 0; i < numTs; i++)
-                ts[i].Join();
-
-            sw.Stop();
-            Console.WriteLine("Time for concurrent version with {0} threads is {1} msec,", nt, sw.ElapsedMilliseconds);
         }
 
         static void Main(string[] args)
