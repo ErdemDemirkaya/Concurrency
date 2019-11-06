@@ -1,11 +1,2 @@
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/bin/Debug/netcoreapp3.0/MergeSort
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/bin/Debug/netcoreapp3.0/MergeSort.deps.json
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/bin/Debug/netcoreapp3.0/MergeSort.runtimeconfig.json
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/bin/Debug/netcoreapp3.0/MergeSort.runtimeconfig.dev.json
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/bin/Debug/netcoreapp3.0/MergeSort.dll
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/bin/Debug/netcoreapp3.0/MergeSort.pdb
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/obj/Debug/netcoreapp3.0/MergeSort.csprojAssemblyReference.cache
 /Users/amighi/workspace/VSProjects/Concurrency/MergeSort/obj/Debug/netcoreapp3.0/MergeSort.AssemblyInfoInputs.cache
 /Users/amighi/workspace/VSProjects/Concurrency/MergeSort/obj/Debug/netcoreapp3.0/MergeSort.AssemblyInfo.cs
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/obj/Debug/netcoreapp3.0/MergeSort.dll
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/obj/Debug/netcoreapp3.0/MergeSort.pdb
