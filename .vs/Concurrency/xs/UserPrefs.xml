@@ -1,24 +1,28 @@
 ﻿<Properties StartupConfiguration="{3E7BD1F1-DDF8-40C5-ACA5-5EF10D522FA7}|Default">
   <MonoDevelop.Ide.ItemProperties.SocketClient FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Semaphores FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.Processes PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="PrimeNumbers/SolProgram.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Asynchrounous/Program.cs">
     <Files>
-      <File FileName="Threads/Program.cs" Line="255" Column="6" />
-      <File FileName="PrimeNumbers/Program.cs" Line="87" Column="1" />
+      <File FileName="Threads/Program.cs" Line="16" Column="24" />
+      <File FileName="PrimeNumbers/Program.cs" Line="59" Column="1" />
       <File FileName="MergeSort/Program.cs" Line="95" Column="1" />
       <File FileName="SocketClient/Program.cs" Line="18" Column="42" />
       <File FileName="SocketServer/Program.cs" Line="1" Column="1" />
-      <File FileName="PrimeNumbers/SolProgram.cs" Line="60" Column="1" />
+      <File FileName="PrimeNumbers/SolProgram.cs" Line="72" Column="39" />
+      <File FileName="Synchronization/Program.cs" Line="17" Column="14" />
+      <File FileName="Processes/Program.cs" Line="12" Column="26" />
+      <File FileName="Semaphores/Program.cs" Line="1" Column="1" />
+      <File FileName="Asynchrounous/Program.cs" Line="12" Column="28" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Concurrency" expanded="True">
-            <Node name="PrimeNumbers" expanded="True">
-              <Node name="SolProgram.cs" selected="True" />
-            </Node>
-            <Node name="SocketClient" expanded="True" />
-            <Node name="SocketServer" expanded="True" />
+            <Node name="Processes" expanded="True" />
+            <Node name="Semaphores" expanded="True" />
+            <Node name="Synchronization" expanded="True" />
+            <Node name="Threads" expanded="True" />
           </Node>
         </State>
       </Pad>
