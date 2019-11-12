@@ -1,0 +1,10 @@
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/bin/Debug/netcoreapp3.0/IPCNamedServer
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/bin/Debug/netcoreapp3.0/IPCNamedServer.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/bin/Debug/netcoreapp3.0/IPCNamedServer.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/bin/Debug/netcoreapp3.0/IPCNamedServer.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/bin/Debug/netcoreapp3.0/IPCNamedServer.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/bin/Debug/netcoreapp3.0/IPCNamedServer.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/obj/Debug/netcoreapp3.0/IPCNamedServer.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/obj/Debug/netcoreapp3.0/IPCNamedServer.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/obj/Debug/netcoreapp3.0/IPCNamedServer.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/obj/Debug/netcoreapp3.0/IPCNamedServer.pdb

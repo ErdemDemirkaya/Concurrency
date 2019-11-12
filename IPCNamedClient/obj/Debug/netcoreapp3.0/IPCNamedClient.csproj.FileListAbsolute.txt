@@ -1,0 +1,10 @@
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/bin/Debug/netcoreapp3.0/IPCNamedClient
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/bin/Debug/netcoreapp3.0/IPCNamedClient.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/bin/Debug/netcoreapp3.0/IPCNamedClient.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/bin/Debug/netcoreapp3.0/IPCNamedClient.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/bin/Debug/netcoreapp3.0/IPCNamedClient.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/bin/Debug/netcoreapp3.0/IPCNamedClient.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/obj/Debug/netcoreapp3.0/IPCNamedClient.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/obj/Debug/netcoreapp3.0/IPCNamedClient.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/obj/Debug/netcoreapp3.0/IPCNamedClient.dll
+/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/obj/Debug/netcoreapp3.0/IPCNamedClient.pdb

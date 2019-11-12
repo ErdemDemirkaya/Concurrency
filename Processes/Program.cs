@@ -57,7 +57,7 @@ namespace ProcessBasics
                         }
                         catch (Exception e)
                         {
-                            Console.WriteLine("Your input is not valid ...");
+                            Console.Out.WriteLine("Your input is not valid ...",e.Message);
                             break;
                         }
                     }
@@ -71,9 +71,9 @@ namespace ProcessBasics
         static void Main(string[] args)
         {
             // Uncomment the methods to see the results of the examples
-            ExampleProcesses exampleWeekTwo = new ExampleProcesses();
-            exampleWeekTwo.printAllProcesses();
-            exampleWeekTwo.terminateProcess();
+            ExampleProcesses exampleProcesses = new ExampleProcesses();
+            exampleProcesses.printAllProcesses();
+            exampleProcesses.terminateProcess();
         }
     }
 }
