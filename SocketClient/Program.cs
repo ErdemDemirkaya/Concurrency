@@ -2,54 +2,190 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Text.Json;
+using System.Threading;
 
 namespace SocketClient
 {
-    class Program
+    public class ClientInfo
     {
-        // ExecuteClient() Method 
-        static void startClient()
+        public string name { get; set; }
+        public string number { get; set; }
+        public int groupNumber { get; set; }
+    }
+
+    public class Client
+    {
+        public Socket clientSocket;
+        public IPEndPoint localEndPoint;
+        public IPAddress ipAddress = IPAddress.Parse("127.0.0.1");
+        public readonly int portNumber = 11111;
+        public readonly int minWaitingTime = 100, maxWaitingTime = 1000;
+        public int waitingTime = 0; 
+        public readonly String stopMsg = "<STOP>";
+        private String msgToSend;
+
+        public Thread workerThread;
+
+        public Client(bool finishing, int n)
+        {
+            waitingTime = new Random().Next(minWaitingTime, maxWaitingTime);
+            if (!finishing)
+            {
+                ClientInfo info = new ClientInfo();
+                info.name = " Client " + n.ToString();
+                info.number = " 0723098 ";
+                info.groupNumber = 2;
+
+                msgToSend = JsonSerializer.Serialize<ClientInfo>(info);
+            }
+            else
+            {
+                msgToSend = stopMsg;
+            }
+        }
+        public void prepareClient()
         {
             try
             {
                 // Establish the remote endpoint for the socket.
-                // This example uses port 11111 on the local computer. 
-                IPHostEntry ipHost = Dns.GetHostEntry(Dns.GetHostName());
-                IPAddress ipAddr = ipHost.AddressList[0];
-                IPEndPoint localEndPoint = new IPEndPoint(ipAddr, 11111);
+                localEndPoint = new IPEndPoint(ipAddress, portNumber);
                 // Creation TCP/IP Socket using  
-                Socket client = new Socket(ipAddr.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+                clientSocket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+            }
+            catch(Exception e)
+            {
+                Console.Out.WriteLine("[Client] Preparation failed: {0}",e.Message);
+            }
+        }
 
-                try
-                {
-                    // Connect Socket to the remote endpoint 
-                    client.Connect(localEndPoint);
-                    // print connected EndPoint information  
-                    Console.WriteLine("Socket connected to -> {0} ", client.RemoteEndPoint.ToString());
-                    // Create a to send 
-                    byte[] messageSent = Encoding.ASCII.GetBytes("Test Client<EOF>");
-                    int byteSent = client.Send(messageSent);
+        public void startCommunication()
+        {
+            Thread.Sleep(waitingTime);
 
-                    // Data buffer 
-                    byte[] messageReceived = new byte[1024];
-                    // Receive the messagge using the method Receive().
-                    int byteRecv = client.Receive(messageReceived);
-                    Console.WriteLine("Message from Server -> {0}",Encoding.ASCII.GetString(messageReceived,0, byteRecv));
+            try
+            {
+                // Connect Socket to the remote endpoint 
+                clientSocket.Connect(localEndPoint);
+                // print connected EndPoint information  
+                Console.WriteLine("[Client] Socket connected to -> {0} ", clientSocket.RemoteEndPoint.ToString());
+                // Create the message to send
+                string msg = msgToSend.ToString();
+                Console.Out.WriteLine("[Client] Message to be sent: {0}", msg);
+                byte[] messageSent = Encoding.ASCII.GetBytes(msg.ToString());
+                int byteSent = clientSocket.Send(messageSent);
 
-                    // Close Socket  
-                    client.Shutdown(SocketShutdown.Both);
-                    client.Close();
-                }
-                catch (Exception e)
-                {   Console.WriteLine("Unexpected exception : {0}", e.ToString()); }
+                // Data buffer 
+                byte[] messageReceived = new byte[1024];
+                // Receive the messagge using the method Receive().
+                int byteRecv = clientSocket.Receive(messageReceived);
+                String rcvdMsg = Encoding.ASCII.GetString(messageReceived, 0, byteRecv);
+                Console.WriteLine("[Client] Message from Server -> {0}", rcvdMsg);
             }
             catch (Exception e)
-            {   Console.WriteLine(e.ToString()); }
+            {
+                Console.WriteLine(e.Message);
+            }
+         }
+        public void endCommunication()
+        {
+            clientSocket.Shutdown(SocketShutdown.Both);
+            clientSocket.Close();
         }
+
+        public void run()
+        {
+            workerThread = new Thread(()=>startCommunication());
+        }
+
+    }
+
+    public class ClientsSimulator
+    {
+        private int numberOfClients, time;
+        private Client[] clients;
+
+        public ClientsSimulator(int n, int t)
+        {
+            numberOfClients = n;
+            time = t;
+        }
+
+        public void SequentialSimulation()
+        {
+            Console.Out.WriteLine("[ClientSimulator] Sequential simulator is going to start ...");
+            clients = new Client[numberOfClients];
+
+            for (int i = 0; i < numberOfClients; i++)
+            {
+                clients[i] = new Client(false,i);
+                clients[i].prepareClient();
+                clients[i].startCommunication();
+                clients[i].endCommunication();
+            }
+            Console.Out.WriteLine("[Client] All clients started with their communications ....waiting to finish");
+
+            Client endClient = new Client(true,-1);
+            endClient.prepareClient();
+            endClient.startCommunication();
+            endClient.endCommunication();
+        }
+
+        public void ConcurrentSimulation()
+        {
+            Console.Out.WriteLine("[ClientSimulator] Sequential simulator is going to start ...");
+            clients = new Client[numberOfClients];
+
+            try
+            {
+                for (int i = 0; i < numberOfClients; i++)
+                {
+                    clients[i] = new Client(false,i);
+                    clients[i].prepareClient();
+                    clients[i].run();
+                }
+                for (int i = 0; i < numberOfClients; i++)
+                {
+                    clients[i].workerThread.Start();     
+                }
+
+                Thread.Sleep(time);
+
+                for (int i = 0; i < numberOfClients; i++)
+                {
+                    clients[i].endCommunication();
+                    clients[i].workerThread.Join();
+                }
+
+                Client endClient = new Client(true,-1);
+                endClient.prepareClient();
+                endClient.run();
+                endClient.workerThread.Start();
+                Thread.Sleep(time);
+                endClient.endCommunication();
+                endClient.workerThread.Join();
+
+            }
+            catch(Exception e)
+            {
+                Console.Out.WriteLine(e.Message);
+            }
+
+        }
+
+    }
+    class Program
+    { 
         // Main Method 
         static void Main(string[] args)
         {
-            startClient();
+            Console.Clear();
+            int wt = 5000 , nc = 150;
+            ClientsSimulator clientsSimulator = new ClientsSimulator(nc,wt);
+            //clientsSimulator.SequentialSimulation();
+            Thread.Sleep(wt);
+            clientsSimulator.ConcurrentSimulation();
+
         }
 
     }

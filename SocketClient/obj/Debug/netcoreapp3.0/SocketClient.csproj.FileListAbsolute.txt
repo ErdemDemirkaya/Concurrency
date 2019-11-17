@@ -1,0 +1,10 @@
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/bin/Debug/netcoreapp3.0/SocketClient
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/bin/Debug/netcoreapp3.0/SocketClient.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/bin/Debug/netcoreapp3.0/SocketClient.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/bin/Debug/netcoreapp3.0/SocketClient.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/bin/Debug/netcoreapp3.0/SocketClient.dll
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/bin/Debug/netcoreapp3.0/SocketClient.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/obj/Debug/netcoreapp3.0/SocketClient.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/obj/Debug/netcoreapp3.0/SocketClient.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/obj/Debug/netcoreapp3.0/SocketClient.dll
+/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/obj/Debug/netcoreapp3.0/SocketClient.pdb
