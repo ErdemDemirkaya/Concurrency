@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{AEC8C729-BC1A-4200-A6E7-BF4151BE7A18}|Default">
   <MonoDevelop.Ide.ItemProperties.SocketClient PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Processes PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="IPCAnonymServer/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="IPCNamedServer/Program.cs">
     <Files>
       <File FileName="SocketServer/ProgramSol.cs" Line="8" Column="1" />
       <File FileName="SocketClient/Program.cs" />
@@ -16,18 +16,12 @@
       <File FileName="IPCNamedServer/Program.cs" Line="23" Column="1" />
       <File FileName="IPCNamedClient/ProgramSol.cs" Line="64" Column="11" />
       <File FileName="IPCNamedClient/Program.cs" Line="33" Column="2" />
-      <File FileName="IPCAnonymServer/Program.cs" Line="15" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Concurrency" expanded="True">
-            <Node name="IPCAnonymClient" expanded="True" />
-            <Node name="IPCAnonymServer" expanded="True">
-              <Node name="Program.cs" selected="True" />
-            </Node>
-            <Node name="IPCNamedClient" expanded="True" />
-            <Node name="IPCNamedServer" expanded="True" />
+            <Node name="IPCPipeAnonymServer" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -41,7 +35,6 @@
     <String>Semaphores/Semaphores.csproj</String>
   </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.IPCPipeAnonymServer PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/Program.cs" relfile="SocketClient/Program.cs" line="116" column="1" />
