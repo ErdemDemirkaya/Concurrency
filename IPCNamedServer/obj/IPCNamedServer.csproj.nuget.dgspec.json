@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/IPCNamedServer.csproj": {}
+    "/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/IPCNamedServer.csproj": {}
   },
   "projects": {
-    "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/IPCNamedServer.csproj": {
+    "/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/IPCNamedServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/IPCNamedServer.csproj",
+        "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/IPCNamedServer.csproj",
         "projectName": "IPCNamedServer",
-        "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/IPCNamedServer.csproj",
+        "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/IPCNamedServer.csproj",
         "packagesPath": "/Users/amighi/.nuget/packages/",
-        "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCPipeExample/obj/",
+        "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedServer/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

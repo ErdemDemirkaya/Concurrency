@@ -1,2 +1,0 @@
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/obj/Debug/netcoreapp3.0/MergeSort.AssemblyInfoInputs.cache
-/Users/amighi/workspace/VSProjects/Concurrency/MergeSort/obj/Debug/netcoreapp3.0/MergeSort.AssemblyInfo.cs

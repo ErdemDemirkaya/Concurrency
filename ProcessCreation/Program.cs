@@ -11,19 +11,22 @@ namespace ProcessCreation
         static void Main(string[] args)
         {
 
-            // First define your process
-            ProcessStartInfo prInfo = new ProcessStartInfo();
-            prInfo.FileName = "../../../../Processes/bin/Debug/netcoreapp3.0/Processes"; // This is an executable program.
-            prInfo.CreateNoWindow = false; // This means start the process in a new window
-            prInfo.UseShellExecute = false;
+            // Todo: Create an object from ProcessStartInfo
+            // Implement your code here ...
+
+
+            // Todo: Provide the path and the name of your executable file
+            // Implement your code here
+
+
+            //prInfo.CreateNoWindow = false; // This means start the process in a new window
+            //prInfo.UseShellExecute = false;
 
             try
             {
-                // Start the defined process
-                using (Process pr = Process.Start(prInfo))
-                {
-                    pr.WaitForExit(); // Parent process waits here to have the child finished.
-                }
+                // Todo: Start your process and then wait for its exit
+                // Implement your code here
+
             }
             catch (Exception e)
             {

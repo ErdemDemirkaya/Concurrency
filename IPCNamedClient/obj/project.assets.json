@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/PipeClient/IPCNamedClient.csproj",
+      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/IPCNamedClient.csproj",
       "projectName": "IPCNamedClient",
-      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/PipeClient/IPCNamedClient.csproj",
+      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/IPCNamedClient.csproj",
       "packagesPath": "/Users/amighi/.nuget/packages/",
-      "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/PipeClient/obj/",
+      "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/IPCNamedClient/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
