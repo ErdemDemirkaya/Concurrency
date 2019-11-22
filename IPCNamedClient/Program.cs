@@ -16,18 +16,20 @@ namespace IPCNamedClient
             Console.WriteLine("Pipe Client is being executed ...");
             Console.WriteLine("[Client] waiting to receive a message");
 
-            var server = new NamedPipeServerStream("PipesOfPiece");
+            var server = new NamedPipeServerStream("PipesOfConcurrency");
             server.WaitForConnection();
+
             StreamReader reader = new StreamReader(server);
 
             while (true){
                 String msg = reader.ReadLine();
-                if (String.IsNullOrEmpty(msg))
+                if (String.IsNullOrEmpty(msg)) // Finish if nothing is entered
                     break;
                 else
                 {
-                    Console.WriteLine(msg);
-                    Console.WriteLine(String.Join("", msg.Reverse()));
+                    Console.WriteLine(msg); // Print the message received
+                    Console.WriteLine(String.Join("", msg.Reverse())); // Print the reverse of the received message
+
                 }
             }
         }

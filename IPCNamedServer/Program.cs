@@ -16,7 +16,7 @@ namespace IPCNamedServer
             Console.WriteLine("[Server] Enter a message to be reversed by the client (press ENTER to exit)");
 
             //Client
-            var client = new NamedPipeClientStream("PipesOfPiece");
+            var client = new NamedPipeClientStream("PipesOfConcurrency");
             client.Connect();
 
             StreamWriter writer = new StreamWriter(client);
