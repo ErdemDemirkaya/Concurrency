@@ -234,12 +234,15 @@ namespace ThreadBasics
         public void runExamples()
         {
             ThreadsList tl = new ThreadsList();
+            // todo: uncomment this and check the execution
             //tl.runExample();
 
             ThreadCreation tc = new ThreadCreation();
-            tc.runExample();
+            // todo: uncomment this and check the execution
+            //tc.runExample();
 
             ThreadsJoin tj = new ThreadsJoin(2000);
+            // todo: uncomment this and check the execution 
             //tj.runExample();
         }
     }

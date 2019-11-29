@@ -1,27 +1,23 @@
 ﻿<Properties StartupConfiguration="{AEC8C729-BC1A-4200-A6E7-BF4151BE7A18}|Default">
   <MonoDevelop.Ide.ItemProperties.SocketClient PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.Processes PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="IPCNamedServer/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Threads/Program.cs">
     <Files>
-      <File FileName="SocketServer/ProgramSol.cs" Line="8" Column="1" />
-      <File FileName="SocketClient/Program.cs" />
-      <File FileName="Synchronization/Program.cs" />
-      <File FileName="SocketServer/Program.cs~" />
-      <File FileName="Threads/Program.cs" />
-      <File FileName="SocketServer/Program.cs" Line="23" Column="1" />
-      <File FileName="Processes/Program.cs" Line="14" Column="50" />
-      <File FileName="ProcessCreation/Program.cs" Line="17" Column="1" />
-      <File FileName="ProcessCreation/ProgramSol.cs" Line="1" Column="1" />
-      <File FileName="IPCNamedServer/ProgramSol.cs" Line="60" Column="11" />
-      <File FileName="IPCNamedServer/Program.cs" Line="23" Column="1" />
-      <File FileName="IPCNamedClient/ProgramSol.cs" Line="64" Column="11" />
-      <File FileName="IPCNamedClient/Program.cs" Line="33" Column="2" />
+      <File FileName="SocketClient/Program.cs" Line="196" Column="47" />
+      <File FileName="SocketServer/ProgramSol.cs" Line="235" Column="44" />
+      <File FileName="SocketServer/Program.cs" />
+      <File FileName="Threads/Program.cs" Line="18" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Concurrency" expanded="True">
-            <Node name="IPCPipeAnonymServer" selected="True" />
+            <Node name="ProcessCreation" expanded="True" />
+            <Node name="SocketClient" expanded="True" />
+            <Node name="SocketServer" expanded="True" />
+            <Node name="Threads" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
@@ -37,8 +33,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/Program.cs" relfile="SocketClient/Program.cs" line="116" column="1" />
-      <Breakpoint file="/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/Program.cs" relfile="SocketClient/Program.cs" line="147" column="1" />
+      <Breakpoint file="/Users/amighi/workspace/VSProjects/Concurrency/SocketServer/ProgramSol.cs" relfile="SocketServer/ProgramSol.cs" line="97" column="1" />
+      <Breakpoint file="/Users/amighi/workspace/VSProjects/Concurrency/SocketClient/Program.cs" relfile="SocketClient/Program.cs" line="100" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
