@@ -238,7 +238,7 @@ namespace ThreadBasics
 
             ThreadCreation tc = new ThreadCreation();
             // todo: uncomment this and check the execution
-            tc.runExample();
+            //tc.runExample();
 
             ThreadsJoin tj = new ThreadsJoin(2000);
             // todo: uncomment this and check the execution 
