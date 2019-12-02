@@ -108,13 +108,12 @@ namespace ThreadBasics
                 Console.Read();
 
                 int num = 500;
-                char c;
                 char[] chars = { 'A', 'B', 'C', 'D', 'E' };
                 Thread[] threads = new Thread[chars.Length];
 
                 for (int i = 0; i < chars.Length; i++)
                 {
-                    c = chars[i];
+                    char c = chars[i];
                     threads[i] = new Thread(() => ThreadCreation.printChars(num, c));
                 }
 
@@ -239,7 +238,7 @@ namespace ThreadBasics
 
             ThreadCreation tc = new ThreadCreation();
             // todo: uncomment this and check the execution
-            //tc.runExample();
+            tc.runExample();
 
             ThreadsJoin tj = new ThreadsJoin(2000);
             // todo: uncomment this and check the execution 
