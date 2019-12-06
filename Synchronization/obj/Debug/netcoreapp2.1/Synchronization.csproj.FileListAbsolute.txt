@@ -1,0 +1,10 @@
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/bin/Debug/netcoreapp2.1/Synchronization.deps.json
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/bin/Debug/netcoreapp2.1/Synchronization.runtimeconfig.json
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/bin/Debug/netcoreapp2.1/Synchronization.runtimeconfig.dev.json
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/bin/Debug/netcoreapp2.1/Synchronization.dll
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/bin/Debug/netcoreapp2.1/Synchronization.pdb
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/obj/Debug/netcoreapp2.1/Synchronization.csprojAssemblyReference.cache
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/obj/Debug/netcoreapp2.1/Synchronization.AssemblyInfoInputs.cache
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/obj/Debug/netcoreapp2.1/Synchronization.AssemblyInfo.cs
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/obj/Debug/netcoreapp2.1/Synchronization.dll
+/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/obj/Debug/netcoreapp2.1/Synchronization.pdb

@@ -1,17 +1,40 @@
-﻿using System;
+﻿/*** Fill these lines with your complete information.
+ * Note: Incomplete information may result in FAIL.
+ * Mameber 1: [First and Last name, first member]: // todo: write here.
+ * Mameber 2: [First and Last name, second member]: // todo: write here.
+ * Std Number 1: [Student number of the first member] // todo: write here.
+ * Std Number 2: [Student number of the second member] // todo: write here.
+ * Class: [what is your class, example INF2C] // todo: write here.
+ ***/
+
+
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 
 namespace SocketServer
 {
     public class ClientInfo
     {
-        public string name { get; set; }
-        public string number { get; set; }
-        public int groupNumber { get; set; }
+        public string studentnr { get; set; }
+        public string classname { get; set; }
+        public int clientid { get; set; }
+        public string teamname { get; set; }
+        public string ip { get; set; }
+        public string secret { get; set; }
+        public string status { get; set; }
+    }
+
+    public class Message
+    {
+        public const string welcome = "WELCOME";
+        public const string stopCommunication = "COMC-STOP";
+        public const string statusEnd = "STAT-STOP";
+        public const string secret = "SECRET";
     }
 
     public class SequentialServer
@@ -24,29 +47,18 @@ namespace SocketServer
         public String results = "";
         public LinkedList<ClientInfo> clients = new LinkedList<ClientInfo>();
 
-        public readonly String stopMsg = "<STOP>";
         private Boolean stopCond = false;
         private int processingTime = 1000;
-        private int listeningQueueSize = 200;
+        private int listeningQueueSize = 5;
 
-
-
-        public void printClients()
-        {
-            string delimiter = " , ";
-            Console.Out.WriteLine("[Server] This is the list of clients communicated");
-            foreach (ClientInfo c in clients)
-            {
-                Console.WriteLine(c.name + delimiter + c.number + delimiter + c.groupNumber.ToString());
-            }
-            Console.Out.WriteLine("[Server] Number of handled clients: {0}", clients.Count);
-
-            clients.Clear();
-            stopCond = false;
-
-        }
         public void prepareServer()
         {
+            byte[] bytes = new Byte[1024];
+            String data = null;
+            int numByte = 0;
+            string replyMsg = "";
+            bool stop;
+
             try
             {
                 Console.WriteLine("[Server] is ready to start ...");
@@ -54,49 +66,6 @@ namespace SocketServer
                 localEndPoint = new IPEndPoint(ipAddress, portNumber);
                 listener = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
                 Console.Out.WriteLine("[Server] A socket is established ...");
-            }
-            catch (Exception e)
-            {
-                Console.Out.WriteLine(e.Message);
-            }
-        }
-        public void processMessage(String msg)
-        {
-            try
-            {
-                Console.WriteLine("[Server] Text received from client -> {0} ", msg);
-                Thread.Sleep(processingTime);
-
-                if (msg.Length > this.stopMsg.Length)
-                {
-                    ClientInfo c = JsonSerializer.Deserialize<ClientInfo>(msg.ToString());
-                    clients.AddLast(c);
-                }
-                if (msg.Equals(stopMsg))
-                {
-                    stopCond = true;
-                    exportResults();
-
-                }
-            }
-            catch (Exception e)
-            {
-                Console.Out.WriteLine("[Server] processMessage {0}", e.Message);
-            }
-        }
-        public void sendReply(Socket connection)
-        {
-            byte[] msg = Encoding.ASCII.GetBytes("Hello. I am the new Server sending this message.");
-            // Send a message to Client  
-            connection.Send(msg);
-        }
-        public void handleClient(Socket connection)
-        {
-        }
-        public void startServer()
-        {
-            try
-            {
                 // associate a network address to the Server Socket. All clients must know this address
                 listener.Bind(localEndPoint);
                 // This is a non-blocking listen with max number of pending requests
@@ -104,30 +73,74 @@ namespace SocketServer
                 while (true)
                 {
                     Console.WriteLine("Waiting connection ... ");
-                    // Suspend while waiting for incoming connection Using  
+                    // Suspend while waiting for incoming connection 
                     Socket connection = listener.Accept();
-                    // Data buffer 
-                    byte[] bytes = new Byte[1024];
-                    String data = null;
-                    int numByte = connection.Receive(bytes);
-                    data += Encoding.ASCII.GetString(bytes, 0, numByte);
+                    this.sendReply(connection, Message.welcome);
 
-                    processMessage(data);
-                    sendReply(connection);
-                    // Close client Socket. After closing, we can use the closed Socket for a new Client Connection 
-                    connection.Shutdown(SocketShutdown.Both);
-                    connection.Close();
+                    stop = false;
+                    while (!stop)
+                    {
+                        numByte = connection.Receive(bytes);
+                        data = Encoding.ASCII.GetString(bytes, 0, numByte);
+                        replyMsg = processMessage(data);
+                        if (replyMsg.Equals(Message.stopCommunication))
+                        {
+                            stop = true;
+                            break;
+                        }
+                        else
+                            this.sendReply(connection, replyMsg);
+                    }
+
+                }
+
+            }
+            catch (Exception e)
+            {
+                Console.Out.WriteLine(e.Message);
+            }
+        }
+        public void handleClient(Socket con)
+        {
+        }
+        public string processMessage(String msg)
+        {
+            Thread.Sleep(processingTime);
+            Console.WriteLine("[Server] received from the client -> {0} ", msg);
+            string replyMsg = "";
+
+            try
+            {
+                switch (msg)
+                {
+                    case Message.stopCommunication:
+                        replyMsg = Message.stopCommunication;
+                        break;
+                    default:
+                        ClientInfo c = JsonSerializer.Deserialize<ClientInfo>(msg.ToString());
+                        clients.AddLast(c);
+                        if (c.clientid == -1)
+                        {
+                            stopCond = true;
+                            exportResults();
+                        }
+                        c.secret = c.studentnr + Message.secret;
+                        c.status = Message.statusEnd;
+                        replyMsg = JsonSerializer.Serialize<ClientInfo>(c);
+                        break;
                 }
             }
             catch (Exception e)
             {
-                listener.Shutdown(SocketShutdown.Both);
-                Console.WriteLine("[Server] Listening socket:{0}", e.ToString());
+                Console.Out.WriteLine("[Server] processMessage {0}", e.Message);
             }
-            finally
-            {
-                listener.Close();
-            }
+
+            return replyMsg;
+        }
+        public void sendReply(Socket connection, string msg)
+        {
+            byte[] encodedMsg = Encoding.ASCII.GetBytes(msg);
+            connection.Send(encodedMsg);
         }
         public void exportResults()
         {
@@ -136,12 +149,27 @@ namespace SocketServer
                 this.printClients();
             }
         }
+        public void printClients()
+        {
+            string delimiter = " , ";
+            Console.Out.WriteLine("[Server] This is the list of clients communicated");
+            foreach (ClientInfo c in clients)
+            {
+                Console.WriteLine(c.classname + delimiter + c.studentnr + delimiter + c.clientid.ToString());
+            }
+            Console.Out.WriteLine("[Server] Number of handled clients: {0}", clients.Count);
+
+            clients.Clear();
+            stopCond = false;
+
+        }
     }
 
 
     public class ConcurrentServer
     {
-        // Todo: Make the class complete
+        // todo: implement this class
+
     }
 
     public class ServerSimulator
@@ -151,13 +179,10 @@ namespace SocketServer
             Console.Out.WriteLine("[Server] A sample server, sequential version ...");
             SequentialServer server = new SequentialServer();
             server.prepareServer();
-            server.startServer();
         }
         public static void concurrentRun()
         {
-            ConcurrentServer server = new ConcurrentServer();
-            // Todo: Make the concurrent run complete
-            Console.WriteLine("[Server] All the threads are joind");
+            // todo: After finishing the concurrent version of the server, implement this method to start the concurrent server
         }
     }
     class Program
@@ -167,7 +192,9 @@ namespace SocketServer
         {
             Console.Clear();
             ServerSimulator.sequentialRun();
-//            ServerSimulator.concurrentRun();
+            // todo: uncomment this when the solution is ready.
+            //ServerSimulator.concurrentRun();
         }
+
     }
 }

@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace Synchronization
 {
-    class ExamplesWeekThree
+    class ExamplesWeekFour
     {
         public class Counter
         {
@@ -101,13 +101,19 @@ namespace Synchronization
     {
         static void Main(string[] args)
         {
-            int until = 1000, times = 10;
-            ExamplesWeekThree exampleWeekThree = new ExamplesWeekThree();
-            Console.WriteLine("Example:" + exampleWeekThree.GetType().Name);
+            int until = 1000, times = 10, wt = 2000;
+            ExamplesWeekFour exampleWeekFour = new ExamplesWeekFour();
+            Console.WriteLine("Example:" + exampleWeekFour.GetType().Name);
 
-            exampleWeekThree.countMultipleTimes(times,until);
-            exampleWeekThree.countMultipleTimesConc(times, until);
-            exampleWeekThree.countMultipleTimesConcTSafe(times, until);
+            Thread.Sleep(wt);
+            // todo: uncomment this and check the final result.
+            //exampleWeekFour.countMultipleTimes(times,until);
+            Thread.Sleep(wt);
+            // todo: uncomment this and check the final result. Why is the result different from sequential version?
+            //exampleWeekFour.countMultipleTimesConc(times, until);
+            Thread.Sleep(wt);
+            // todo: uncomment this and check the final result. Is this result reliable? Check the solution.
+            //exampleWeekFour.countMultipleTimesConcTSafe(times, until);
 
         }
     }

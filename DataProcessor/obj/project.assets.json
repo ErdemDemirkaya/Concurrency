@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/Synchronization.csproj",
-      "projectName": "Synchronization",
-      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/Synchronization.csproj",
+      "projectUniqueName": "/Users/amighi/workspace/VSProjects/Concurrency/DataProcessor/DataProcessor.csproj",
+      "projectName": "DataProcessor",
+      "projectPath": "/Users/amighi/workspace/VSProjects/Concurrency/DataProcessor/DataProcessor.csproj",
       "packagesPath": "/Users/amighi/.nuget/packages/",
-      "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/Synchronization/obj/",
+      "outputPath": "/Users/amighi/workspace/VSProjects/Concurrency/DataProcessor/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
