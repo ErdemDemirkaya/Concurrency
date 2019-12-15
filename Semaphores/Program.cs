@@ -1,5 +1,5 @@
 ﻿using System;
-using SemaphoreExampleSol;
+using SemaphoreExample;
 
 namespace Semaphores
 {
