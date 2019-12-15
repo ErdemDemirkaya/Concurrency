@@ -43,7 +43,7 @@ namespace DiningNormal
         public Fork[] forks;
         public Philosopher[] philosophers;
         public Thread[] threads;
-        public Table(int num, int food)
+        public Table(int num)
         {
             forks = new Fork[num];
             philosophers = new Philosopher[num];
