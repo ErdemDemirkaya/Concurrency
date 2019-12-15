@@ -1,4 +1,5 @@
 ﻿using System;
+using SemaphoreExampleSol;
 
 namespace Semaphores
 {
@@ -6,7 +7,15 @@ namespace Semaphores
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int m = 10, M = 1000;
+
+            ProducerConsumerSimulator pcSimulator = new ProducerConsumerSimulator(m,M);
+
+            pcSimulator.sequentialOneProducerOneConsumer();
+            pcSimulator.concurrentOneProducerOneConsumer();
+            pcSimulator.concurrentMultiProducerMultiConsumer();
+
+            Console.WriteLine("[END]");
         }
     }
 }
