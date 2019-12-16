@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+/* Note: If you are using .net core 2.1, you need to install System.Text.Json (use NuGet). */
 using System.Text.Json;
 using System.Threading;
 

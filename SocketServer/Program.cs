@@ -13,7 +13,8 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Text.Json;
+/* Note: If you are using .net core 2.1, install System.Text.Json (use NuGet). */
+using System.Text.Json; 
 using System.Threading;
 
 namespace SocketServer
