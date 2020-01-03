@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace MergeSort
+namespace Exercise
 {
     public class SequentialMergeSort
     {

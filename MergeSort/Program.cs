@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Threading;
-//using SolutionMergeSort;
+using Exercise;
+//using Solution;
 
-namespace MergeSort
+namespace Program
 {
     class MergeSort
     {
@@ -18,6 +19,7 @@ namespace MergeSort
             mergeSort.sortSeq(0, arr.Length - 1);
             mergeSort.printContent();
 
+            // uncomment this only if the solution is available
             //Console.WriteLine("\n Now concurrent sort will be running ...");
             //SolutionConcurrentMergeSort concMergeSort = new SolutionConcurrentMergeSort();
             //concMergeSort.sortCon(arr);

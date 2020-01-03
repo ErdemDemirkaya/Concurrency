@@ -1,37 +1,19 @@
-﻿using System;
-using System.IO;
-using System.IO.Pipes;
-using System.Linq;
+﻿using Exercise;
+//using Solution;
 
-/*
- * This is an example representing how two processes can communicate through NamedPipe
- */
-
-namespace IPCNamedClient
+namespace Program
 {
-    class Program
+    class IPCClient
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Pipe Client is being executed ...");
-            Console.WriteLine("[Client] waiting to receive a message");
+            new IPCNamedClient().ipcClientCommunicate();
 
-            var server = new NamedPipeServerStream("PipesOfConcurrency");
-            server.WaitForConnection();
+             //SolutionIPCNamedClient client = new SolutionIPCNamedClient("MessageReversePipe");
+             //client.prepareClient();
+             //client.communicate();
+            
 
-            StreamReader reader = new StreamReader(server);
-
-            while (true){
-                String msg = reader.ReadLine();
-                if (String.IsNullOrEmpty(msg)) // Finish if nothing is entered
-                    break;
-                else
-                {
-                    Console.WriteLine(msg); // Print the message received
-                    Console.WriteLine(String.Join("", msg.Reverse())); // Print the reverse of the received message
-
-                }
-            }
         }
     }
 }

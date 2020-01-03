@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "Delegates/1.0.0": {
+      "Semaphores/1.0.0": {
         "runtime": {
-          "Delegates.dll": {}
+          "Semaphores.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Delegates/1.0.0": {
+    "Semaphores/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
