@@ -1,5 +1,5 @@
 ﻿using System;
-using SemaphoreExample;
+using SemaphoreExampleSol;
 
 namespace Semaphores
 {
@@ -12,7 +12,7 @@ namespace Semaphores
             ProducerConsumerSimulator pcSimulator = new ProducerConsumerSimulator(m,M);
 
             pcSimulator.sequentialOneProducerOneConsumer();
-            pcSimulator.concurrentOneProducerOneConsumer();
+            //pcSimulator.concurrentOneProducerOneConsumer();
             pcSimulator.concurrentMultiProducerMultiConsumer();
 
             Console.WriteLine("[END]");

@@ -4,6 +4,10 @@ using System.IO.Pipes;
 using System.Linq;
 using Exercise;
 
+/*
+ * This is an example representing how two processes can communicate through NamedPipe
+ */
+
 namespace Solution
 {
     public class SolutionIPCNamedClient : IPCNamedClient

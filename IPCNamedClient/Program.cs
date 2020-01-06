@@ -1,6 +1,7 @@
 ﻿using Exercise;
 //using Solution;
 
+
 namespace Program
 {
     class IPCClient

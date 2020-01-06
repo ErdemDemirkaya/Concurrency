@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 
-namespace SemaphoreExample
+namespace SemaphoreExampleSol
 {
     class Buffer
     {
@@ -15,17 +15,13 @@ namespace SemaphoreExample
         }
         public void write(int value)
         {
-            buffer[emptyIndex] = value;
-            // todo: for testing the correct behaviour, comment the statement above and uncomment the one below. Also fix method read()
-            // buffer[emptyIndex]++;
+            buffer[emptyIndex]++; //= value;
             emptyIndex = (emptyIndex + 1) % buffer.Length;
         }
         public int read()
         {
             int readIndex = (emptyIndex + buffer.Length - 1) % buffer.Length;
-            int result = buffer[readIndex];
-            // todo: First read the todo for method write(). For testing comment the previous statemant and uncomment the next one.
-            //int result = buffer[readIndex]--;
+            int result = buffer[readIndex]--;
             emptyIndex = readIndex;
             return result;
         }
@@ -45,14 +41,12 @@ namespace SemaphoreExample
             this.producerSemaphore = psem;
             this.consumerSemaphore = csem;
         }
-
-        //todo: Method produce: What is the critical section here?
-        //todo: There is a statement missing here. The producer must try a semaphore before entering the critical section.
-        // Add the correct method for waiting on a correct semaphore.
         public void produce()
         {
             Thread.Sleep(new Random().Next(minTime, maxTime));
             int data = new Random().Next();
+
+            producerSemaphore.WaitOne();
             this.buffer.write(data);
             Console.Out.WriteLine("[Producer] {0} is written", data.ToString());
             consumerSemaphore.Release();
@@ -84,11 +78,11 @@ namespace SemaphoreExample
         public void consume()
         {
             Thread.Sleep(new Random().Next(minTime, maxTime));
-            // todo: Are correct semahpres waited, released here? Justify your answer and fix the problem.
+
             consumerSemaphore.WaitOne();
             int data = this.buffer.read();
             Console.Out.WriteLine("[Consumer] {0} is read ", data.ToString());
-            consumerSemaphore.Release(); 
+            producerSemaphore.Release();
         }
         public void MultiConsume(Object n)
         {
@@ -112,9 +106,7 @@ namespace SemaphoreExample
         public ProducerConsumerSimulator(int min, int max)
         {
             buffer = new Buffer(2);
-            // todo: check the initial values. What the meanings of 1 an 0 here.
-            // Check it here: https://docs.microsoft.com/en-us/dotnet/api/system.threading.semaphore.-ctor?view=netframework-4.8
-            // Why are they different?
+            // todo: check the initial values. Why are they different?
             psem = new Semaphore(1,1);
             csem = new Semaphore(0,1); 
         }
@@ -155,10 +147,11 @@ namespace SemaphoreExample
             consumerThread.Join();
 
         }
+
         public void concurrentMultiProducerMultiConsumer()
         {
+            //todo: implement the method for multiple producers and multiple consumers
             int iterations = 100 , num = 5;
-            // todo: check how multiple threads for producers and consumers are implemented.
 
             Console.Out.WriteLine("[ConcSimulator] is going to start ....");
             Producer[] ps = new Producer[num];
