@@ -2,6 +2,7 @@
 using BreakfastExample;
 using TaskExamples;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Asynchrounous
 {
@@ -41,9 +42,14 @@ namespace Asynchrounous
         }
         static void ExampleBreakfast()
         {
-            new Breakfast().Prepare();
 
-            new Breakfast().PrepareAsync(); // todo: Is this a correct invocation? What is the problem? Fix it.
+            Breakfast bf = new Breakfast();
+
+            bf.Prepare();
+
+            Task tbf = bf.PrepareAsync();
+            // do something esle
+            // todo: Is this a correct invocation? What is the problem? Fix it.
         }
         static void Main(string[] args)
         {
