@@ -48,6 +48,7 @@ namespace Asynchrounous
             bf.Prepare();
 
             Task tbf = bf.PrepareAsync();
+            // todo: what should be here?
             // do something esle
             // todo: Is this a correct invocation? What is the problem? Fix it.
         }
